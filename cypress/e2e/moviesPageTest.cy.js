@@ -139,7 +139,7 @@ describe('Movies Page Test Suite', ()=> {
         })
     })
 
-    it.only('Load more button shows new movies', () => {
+    it('Load more button shows new movies', () => {
         cy.visit('/movie');
         cy.getMoviesList().then((moviesList)=>{
             cy.get("a[href='/movie?page=2']").click();
