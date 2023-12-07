@@ -1,10 +1,14 @@
 {
   "devDependencies": {
-    "cypress": "^13.5.1"
+    "cypress": "^13.5.1",
+    "cypress-mochawesome-reporter": "^3.7.0"
   },
   "scripts": {
     "test": "cypress run",
     "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/homePageTest.cy.js",
     "cypress:firefox": "cypress run --browser firefox"
+  },
+  "dependencies": {
+    "mochawesome": "^7.1.3"
   }
 }
