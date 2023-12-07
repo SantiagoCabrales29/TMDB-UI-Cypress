@@ -4,7 +4,7 @@
   },
   "scripts": {
     "test": "cypress run",
-    "cypress:chrome": "cypress run --browser chrome",
+    "cypress:chrome": "cypress run --browser chrome --spec cypress/e2e/homePageTest.cy.js",
     "cypress:firefox": "cypress run --browser firefox"
   }
 }

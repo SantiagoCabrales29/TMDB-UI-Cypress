@@ -1,14 +1,25 @@
 describe('Home Page Test Suite', () => {
 
   it('List of trending is visible', () => {
-    cy.visit('')
+    cy.visit('',{
+      headers: {
+          'accept': 'application/json, text/plain, */*',
+          'user-agent': 'axios/0.27.2'
+      }
+    });
 
     cy.get("div[id='trending_scroller'] div.image").should('be.visible');
     cy.url().should('eq','https://www.themoviedb.org/');
   })
 
   it('User should be able to use the search bar in the home page', () => {
-    cy.visit('')
+    cy.visit('',{
+      headers: {
+          'accept': 'application/json, text/plain, */*',
+          'user-agent': 'axios/0.27.2'
+      }
+    });   
+
     let movieName = 'The Godfather';
 
 
@@ -29,7 +40,13 @@ describe('Home Page Test Suite', () => {
 
 
   it('User is able to navigate to Movies Page', ()=> {
-    cy.visit('');
+    cy.visit('',{
+      headers: {
+          'accept': 'application/json, text/plain, */*',
+          'user-agent': 'axios/0.27.2'
+      }
+    });
+    
     cy.get("ul[data-role='menu'] > li[role='menuitem'] > a[href='/movie']").click();
     cy.contains("Popular").click();
 
